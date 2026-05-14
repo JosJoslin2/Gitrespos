@@ -7,17 +7,22 @@
   </head>
   <body>
 
+    <!-- NAVIGATION -->
     <header>
       <nav class="navbar">
         <div class="logo">Joslin_Gruppe</div>
         <button class="cart-btn" id="cartBtn">
           🛒 Warenkorb(<span id="cartCount">0</span>)
         </button>
+        <button class="cart-btn" id="übersichtBtn">
+    📋 Bestellübersicht
+</button>
       </nav>
     </header>
 
     <main>
 
+      <!-- HERO BEREICH -->
       <section class="hero">
         <h1>Deine Lieblingskonzerte</h1>
         <p>Jetzt Tickets kaufen und unvergessliche Momente erleben!</p>
@@ -30,25 +35,29 @@
         </div>
       </section>
 
+      <!-- WARENKORB -->
       <section class="cart-section" id="cartSection" style="display: none;">
         <h2>🛒 Dein Warenkorb</h2>
         <div id="cartItems"></div>
         <div class="cart-total">
           <strong>Gesamt: <span id="cartTotal">0</span> €</strong>
         </div>
-        <button class="order-btn" id="orderBtn">Jetzt bestellen</button>
+          <a href="https://www.paypal.com/paypalme/joslynoAzemgning" target="_blank">
+        <button class="order-btn">💳 Jetzt mit PayPal bezahlen</button>
+        </a>
       </section>
 
+      <!-- BESTELLFORMULAR -->
       <section class="form-section" id="formSection" style="display: none;">
-        <h2> Deine Daten</h2>
+        <h2>Deine Daten</h2>
 
         <div class="form-group">
-          <label> Vorname</label>
+          <label>Vorname</label>
           <input type="text" id="vorname" placeholder="Dein Vorname">
         </div>
 
         <div class="form-group">
-          <label> Name</label>
+          <label>Name</label>
           <input type="text" id="name" placeholder="Dein Nachname">
         </div>
 
@@ -70,26 +79,31 @@
         <button class="order-btn" id="submitBtn">✅ Bestellung abschicken</button>
       </section>
 
-    </main>
-    <!-- BESTÄTIGUNG -->
-    <section class="confirm-section" id="confirmSection" style="display: none;">
-    <div class="confirm-box">
-        <h1>🎉</h1>
-        <h2>Fast fertig!</h2>
-        <p id="confirmName"></p>
-        <p>Gesamtbetrag: <strong id="confirmTotal"></strong> €</p>
-        <p>Klicke auf PayPal um zu bezahlen!</p>
-
-        <!-- PAYPAL BUTTON -->
-        <a id="paypalBtn" href="#" target="_blank">
-            <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_150x38.png" 
-                 alt="PayPal">
-        </a>
-
-        <br><br>
-        <button class="order-btn" id="newOrderBtn">🎵 Neue Bestellung</button>
+      <!-- BESTÄTIGUNG -->
+      <section class="confirm-section" id="confirmSection" style="display: none;">
+        <div class="confirm-box">
+            <h1>🎉</h1>
+            <h2>Vielen Dank für deine Bestellung!</h2>
+            <p id="confirmName"></p>
+            <p>Deine Tickets werden bald per Email geschickt!</p>
+            <button class="order-btn" id="newOrderBtn">🎵 Neue Bestellung</button>
+        </div>
+      </section>
+      <!-- BESTELLÜBERSICHT -->
+<section class="übersicht-section" id="übersichtSection" style="display: none;">
+    <div class="übersicht-box">
+        <h2>📋 Bestellübersicht</h2>
+        <div id="übersichtItems"></div>
+        <div class="cart-total">
+            <strong>Gesamt: <span id="übersichtTotal">0</span> €</strong>
+        </div>
+        <button class="order-btn" id="übersichtSchliessen">❌ Schließen</button>
     </div>
 </section>
+
+    </main>
+
+    <!-- FOOTER -->
     <footer>
       <p>© 2026 KonzertTickets – Alle Rechte vorbehalten</p>
     </footer>
