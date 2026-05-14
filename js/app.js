@@ -107,7 +107,7 @@ submitBtn.addEventListener("click", function() {
 
     // Bestätigung anzeigen
     document.getElementById("confirmSection").style.display = "block";
-    document.getElementById("confirmName").innerHTML = + vorname + " " + name;
+    document.getElementById("confirmName").innerHTML = vorname + " " + name;
 });
 
 // 9. Neue Bestellung
@@ -117,4 +117,37 @@ newOrderBtn.addEventListener("click", function() {
     document.getElementById("cartCount").innerHTML = 0;
     document.getElementById("confirmSection").style.display = "none";
     document.getElementById("cartSection").style.display = "none";
+});
+// 10. Bestellübersicht
+let übersichtBtn = document.getElementById("übersichtBtn");
+
+übersichtBtn.addEventListener("click", function() {
+    let übersichtItems = document.getElementById("übersichtItems");
+    übersichtItems.innerHTML = "";
+
+    let gesamt = 0;
+
+    if (warenkorb.length === 0) {
+        übersichtItems.innerHTML = "<p>Noch keine Tickets gekauft!</p>";
+    } else {
+        warenkorb.forEach(function(ticket) {
+            gesamt = gesamt + ticket.preis;
+            übersichtItems.innerHTML += `
+                <div class="übersicht-item">
+                    <p>🎟️ ${ticket.name}</p>
+                    <p>${ticket.preis} €</p>
+                </div>
+            `;
+        });
+    }
+
+    document.getElementById("übersichtTotal").innerHTML = gesamt;
+    document.getElementById("übersichtSection").style.display = "block";
+});
+
+// 11. Übersicht schließen
+let übersichtSchliessen = document.getElementById("übersichtSchliessen");
+
+übersichtSchliessen.addEventListener("click", function() {
+    document.getElementById("übersichtSection").style.display = "none";
 });
