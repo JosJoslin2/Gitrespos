@@ -1,4 +1,3 @@
-// 1. Konzert Daten
 let konzerte = [
     {
         name: "Ko-c",
@@ -23,10 +22,8 @@ let konzerte = [
     }
 ];
 
-// 2. Leerer Warenkorb
 let warenkorb = [];
 
-// 3. Konzerte anzeigen
 function konzerteAnzeigen() {
     let grid = document.getElementById("concertsGrid");
     konzerte.forEach(function(konzert) {
@@ -45,7 +42,6 @@ function konzerteAnzeigen() {
     });
 }
 
-// 4. Ticket kaufen
 function kaufen(name, preis) {
     warenkorb.push({
         name: name,
@@ -58,7 +54,6 @@ function kaufen(name, preis) {
     warenkorbAnzeigen();
 }
 
-// 5. Warenkorb anzeigen
 function warenkorbAnzeigen() {
     let cartItems = document.getElementById("cartItems");
     cartItems.innerHTML = "";
@@ -76,17 +71,14 @@ function warenkorbAnzeigen() {
     cartTotal.innerHTML = gesamt;
 }
 
-// 6. Alles starten
 konzerteAnzeigen();
 
-// 7. Formular öffnen
 let orderBtn = document.getElementById("orderBtn");
 orderBtn.addEventListener("click", function() {
     let formSection = document.getElementById("formSection");
     formSection.style.display = "block";
 });
 
-// 8. Bestellung abschicken
 let submitBtn = document.getElementById("submitBtn");
 submitBtn.addEventListener("click", function() {
     let vorname = document.getElementById("vorname").value;
@@ -101,16 +93,13 @@ submitBtn.addEventListener("click", function() {
         return;
     }
 
-    // Alles verstecken
     document.getElementById("cartSection").style.display = "none";
     document.getElementById("formSection").style.display = "none";
 
-    // Bestätigung anzeigen
     document.getElementById("confirmSection").style.display = "block";
     document.getElementById("confirmName").innerHTML = vorname + " " + name;
 });
 
-// 9. Neue Bestellung
 let newOrderBtn = document.getElementById("newOrderBtn");
 newOrderBtn.addEventListener("click", function() {
     warenkorb = [];
@@ -118,7 +107,6 @@ newOrderBtn.addEventListener("click", function() {
     document.getElementById("confirmSection").style.display = "none";
     document.getElementById("cartSection").style.display = "none";
 });
-// 10. Bestellübersicht
 let übersichtBtn = document.getElementById("übersichtBtn");
 
 übersichtBtn.addEventListener("click", function() {
@@ -145,7 +133,6 @@ let übersichtBtn = document.getElementById("übersichtBtn");
     document.getElementById("übersichtSection").style.display = "block";
 });
 
-// 11. Übersicht schließen
 let übersichtSchliessen = document.getElementById("übersichtSchliessen");
 
 übersichtSchliessen.addEventListener("click", function() {
