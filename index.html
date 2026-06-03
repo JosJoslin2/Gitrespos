@@ -7,6 +7,7 @@
   </head>
   <body>
 
+    <!-- NAVIGATION -->
     <header>
       <nav class="navbar">
         <div class="logo">Joslin_Gruppe</div>
@@ -14,35 +15,37 @@
           🛒 Warenkorb(<span id="cartCount">0</span>)
         </button>
         <button class="cart-btn" id="übersichtBtn">
-    📋 Bestellübersicht
-</button>
+          📋 Bestellübersicht
+        </button>
       </nav>
     </header>
 
     <main>
 
+      <!-- HERO BEREICH -->
       <section class="hero">
         <h1>Deine Lieblingskonzerte</h1>
         <p>Jetzt Tickets kaufen und unvergessliche Momente erleben!</p>
       </section>
 
+      <!-- KONZERT LISTE -->
       <section class="concerts-section">
         <h2>Aktuelle Konzerte</h2>
         <div class="concerts-grid" id="concertsGrid">
         </div>
       </section>
 
+      <!-- WARENKORB -->
       <section class="cart-section" id="cartSection" style="display: none;">
         <h2>🛒 Dein Warenkorb</h2>
         <div id="cartItems"></div>
         <div class="cart-total">
           <strong>Gesamt: <span id="cartTotal">0</span> €</strong>
         </div>
-          <a href="https://www.paypal.com/paypalme/joslynoAzemgning" target="_blank">
-        <button class="order-btn">💳 Jetzt mit PayPal bezahlen</button>
-        </a>
+        <button class="order-btn" id="orderBtn">Jetzt bestellen</button>
       </section>
 
+      <!-- BESTELLFORMULAR -->
       <section class="form-section" id="formSection" style="display: none;">
         <h2>Deine Daten</h2>
 
@@ -71,9 +74,10 @@
           <input type="email" id="email" placeholder="Deine Email">
         </div>
 
-        <button class="order-btn" id="submitBtn">✅ Bestellung abschicken</button>
+        <button class="order-btn" id="submitBtn">Bestellung abschicken</button>
       </section>
 
+      <!-- BESTÄTIGUNG -->
       <section class="confirm-section" id="confirmSection" style="display: none;">
         <div class="confirm-box">
             <h1>🎉</h1>
@@ -83,19 +87,22 @@
             <button class="order-btn" id="newOrderBtn">🎵 Neue Bestellung</button>
         </div>
       </section>
-<section class="übersicht-section" id="übersichtSection" style="display: none;">
-    <div class="übersicht-box">
-        <h2>📋 Bestellübersicht</h2>
-        <div id="übersichtItems"></div>
-        <div class="cart-total">
-            <strong>Gesamt: <span id="übersichtTotal">0</span> €</strong>
+
+      <!-- BESTELLÜBERSICHT -->
+      <section class="übersicht-section" id="übersichtSection" style="display: none;">
+        <div class="übersicht-box">
+            <h2>📋 Bestellübersicht</h2>
+            <div id="übersichtItems"></div>
+            <div class="cart-total">
+                <strong>Gesamt: <span id="übersichtTotal">0</span> €</strong>
+            </div>
+            <button class="order-btn" id="übersichtSchliessen"> Schließen</button>
         </div>
-        <button class="order-btn" id="übersichtSchliessen">❌ Schließen</button>
-    </div>
-</section>
+      </section>
 
     </main>
 
+    <!-- FOOTER -->
     <footer>
       <p>© 2026 KonzertTickets – Alle Rechte vorbehalten</p>
     </footer>
