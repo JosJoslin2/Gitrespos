@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <title>Login - KonzertTickets</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">Joslin_Gruppe</div>
+        <a href="Ticket.html">
+          <button class="cart-btn">🎵 Home</button>
+        </a>
+        <a href="registrierung.html">
+          <button class="cart-btn">📝 Registrieren</button>
+        </a>
+      </nav>
+    </header>
+    <main>
+      <section class="form-section">
+
+        <div id="errorBox" style="display:none;" class="error-box"></div>
+
+        <h2>🔑 Einloggen</h2>
+
+        <div class="form-group">
+          <label>📧 Email</label>
+          <input type="email" id="email" placeholder="Deine Email">
+        </div>
+
+        <div class="form-group">
+          <label>🔒 Passwort</label>
+          <input type="password" id="passwort" placeholder="Dein Passwort">
+        </div>
+
+        <button class="order-btn" id="loginBtn">🔑 Einloggen</button>
+
+      </section>
+    </main>
+    <footer>
+      <p>© 2026 KonzertTickets – Alle Rechte vorbehalten</p>
+    </footer>
+    <script src="js/auth.js"></script>
+  </body>
+</html>

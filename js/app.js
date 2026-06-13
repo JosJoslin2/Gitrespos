@@ -1,4 +1,3 @@
-
 let konzerte = [
     {
         name: "Ko-c",
@@ -74,6 +73,16 @@ function warenkorbAnzeigen() {
 
 konzerteAnzeigen();
 
+let cartBtn = document.getElementById("cartBtn");
+cartBtn.addEventListener("click", function() {
+    let cartSection = document.getElementById("cartSection");
+    if (cartSection.style.display === "none") {
+        cartSection.style.display = "block";
+    } else {
+        cartSection.style.display = "none";
+    }
+});
+
 let orderBtn = document.getElementById("orderBtn");
 orderBtn.addEventListener("click", function() {
     let formSection = document.getElementById("formSection");
@@ -108,8 +117,8 @@ newOrderBtn.addEventListener("click", function() {
     document.getElementById("confirmSection").style.display = "none";
     document.getElementById("cartSection").style.display = "none";
 });
-let übersichtBtn = document.getElementById("übersichtBtn");
 
+let übersichtBtn = document.getElementById("übersichtBtn");
 übersichtBtn.addEventListener("click", function() {
     let übersichtItems = document.getElementById("übersichtItems");
     übersichtItems.innerHTML = "";
@@ -135,7 +144,6 @@ let übersichtBtn = document.getElementById("übersichtBtn");
 });
 
 let übersichtSchliessen = document.getElementById("übersichtSchliessen");
-
 übersichtSchliessen.addEventListener("click", function() {
     document.getElementById("übersichtSection").style.display = "none";
 });

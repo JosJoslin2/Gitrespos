@@ -6,8 +6,6 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-
-    <!-- NAVIGATION -->
     <header>
       <nav class="navbar">
         <div class="logo">Joslin_Gruppe</div>
@@ -17,25 +15,24 @@
         <button class="cart-btn" id="übersichtBtn">
           📋 Bestellübersicht
         </button>
+        <a href="registrierung.html">
+          <button class="cart-btn">📝 Registrieren</button>
+        </a>
+        <a href="login.html">
+          <button class="cart-btn">🔑 Login</button>
+        </a>
       </nav>
     </header>
-
     <main>
-
-      <!-- HERO BEREICH -->
       <section class="hero">
         <h1>Deine Lieblingskonzerte</h1>
         <p>Jetzt Tickets kaufen und unvergessliche Momente erleben!</p>
       </section>
-
-      <!-- KONZERT LISTE -->
       <section class="concerts-section">
         <h2>Aktuelle Konzerte</h2>
         <div class="concerts-grid" id="concertsGrid">
         </div>
       </section>
-
-      <!-- WARENKORB -->
       <section class="cart-section" id="cartSection" style="display: none;">
         <h2>🛒 Dein Warenkorb</h2>
         <div id="cartItems"></div>
@@ -44,40 +41,30 @@
         </div>
         <button class="order-btn" id="orderBtn">Jetzt bestellen</button>
       </section>
-
-      <!-- BESTELLFORMULAR -->
       <section class="form-section" id="formSection" style="display: none;">
         <h2>Deine Daten</h2>
-
         <div class="form-group">
           <label>Vorname</label>
           <input type="text" id="vorname" placeholder="Dein Vorname">
         </div>
-
         <div class="form-group">
           <label>Name</label>
           <input type="text" id="name" placeholder="Dein Nachname">
         </div>
-
         <div class="form-group">
           <label>🏠 Adresse</label>
           <input type="text" id="adresse" placeholder="Deine Adresse">
         </div>
-
         <div class="form-group">
           <label>📞 Telefonnummer</label>
           <input type="tel" id="telefon" placeholder="Deine Telefonnummer">
         </div>
-
         <div class="form-group">
           <label>📧 Email</label>
           <input type="email" id="email" placeholder="Deine Email">
         </div>
-
         <button class="order-btn" id="submitBtn">Bestellung abschicken</button>
       </section>
-
-      <!-- BESTÄTIGUNG -->
       <section class="confirm-section" id="confirmSection" style="display: none;">
         <div class="confirm-box">
             <h1>🎉</h1>
@@ -87,7 +74,6 @@
             <button class="order-btn" id="newOrderBtn">🎵 Neue Bestellung</button>
         </div>
       </section>
-
       <!-- BESTELLÜBERSICHT -->
       <section class="übersicht-section" id="übersichtSection" style="display: none;">
         <div class="übersicht-box">
@@ -96,17 +82,13 @@
             <div class="cart-total">
                 <strong>Gesamt: <span id="übersichtTotal">0</span> €</strong>
             </div>
-            <button class="order-btn" id="übersichtSchliessen"> Schließen</button>
+            <button class="order-btn" id="übersichtSchliessen">Schließen</button>
         </div>
       </section>
-
     </main>
-
-    <!-- FOOTER -->
     <footer>
       <p>© 2026 KonzertTickets – Alle Rechte vorbehalten</p>
     </footer>
-
     <script src="js/app.js"></script>
   </body>
 </html>
